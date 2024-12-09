@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="box">
+            <div><a href="https://x.com/?lang=es"><img src="img/x.png" alt="Icono X" class="L" loading="lazy"></a></div>
+            <div><a href="https://www.facebook.com"><img src="img/fb.png" alt="Icono Facebook" class="L" loading="lazy"></a></div>
+            <div><a href="https://web.whatsapp.com/"><img src="img/ws.png" alt="Icono WhatsApp" class="L" loading="lazy"></a></div>
+        </div>
+
+        <div class="a">
+    <div class="hedd">
+  <div class="one">
+    <a href="index.html"><img src="img\logo.png" alt="logo" class="logo"></a>
+  </div>
+
+  <div class="serliv">
+    <h1>Serliv</h1></div>
+</div>
+
+  <div class="two" align="left">
+    <br><br>
+    <nav>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Servicios</a>
+            <div class="dropdown-content">
+                 <a href="agua.html">Agua</a>
+                <a href="electricidad.html">Electricidad</a>
+                <a href="basura.html">Recolección de Basura</a>
+            </div>
+        </div>
+        <a href="reporte.html">Reporte</a>
+        <a href="acerca_de.html">Acerca de...</a>
+        <form method="get">
+            <input type="text" name="search" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+        </form>
+    </nav>
+</div>
+</div>
+
+
+    </header>
+    <main>
+
+        <fieldset id="reporteServiciosFieldset">
+    <legend id="reporteServiciosLegend">Reporte de Servicios</legend>
+    <form id="reporteServiciosForm">
+        <!-- Tipo de Servicio -->
+        <label for="tipoServicio" class="reporteServiciosLabel">
+            <img src="img/servicios.png" alt="Icono de ejemplo" class="custom-icon">
+            Selecciona el servicio que deseas reportar:
+        </label>
+        <select id="tipoServicio" name="tipoServicio" class="reporteServiciosSelect" required>
+            <option value="" disabled selected>-- Selecciona un servicio --</option>
+            <option value="agua">Agua</option>
+            <option value="luz">Electricidad</option>
+            <option value="basura">Recolección de Basura</option>
+        </select><br>
+
+        <!-- Descripción del Problema -->
+        <label for="descripcion" class="reporteServiciosLabel">
+            <img src="img/problema.jpg" alt="Icono de descripción" class="reporteServiciosIcon">
+            Describe el problema:
+        </label>
+        <textarea id="descripcion" name="descripcion" class="reporteServiciosTextarea" rows="4" cols="50" placeholder="Escribe aquí los detalles del problema..." required></textarea><br>
+
+        <!-- Dirección o Ubicación -->
+        <label for="ubicacion" class="reporteServiciosLabel">
+            <img src="img/ubicacion.png" alt="Icono de ubicación" class="reporteServiciosIcon">
+            Dirección o ubicación del problema:
+        </label>
+        <input type="text" id="ubicacion" name="ubicacion" class="reporteServiciosInput" placeholder="Ejemplo: Calle 123, Colonia Centro" required><br>
+
+        <!-- Contacto -->
+        <label for="contacto" class="reporteServiciosLabel">
+            <img src="img/contacto.png" alt="Icono de contacto" class="reporteServiciosIcon">
+            Información de contacto (opcional):
+        </label>
+        <input type="text" id="contacto" name="contacto" class="reporteServiciosInput" placeholder="Teléfono o correo electrónico"><br>
+<br>
+
+        <!-- Botón de Envío -->
+        <input type="submit" value="Enviar Reporte" id="reporteServiciosSubmit" class="reporteServiciosButton">
+    </form>
+</fieldset>
+
+<script>
+    // Capturar el evento de envío del formulario
+    document.getElementById('reporteServiciosForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar recargar la página
+        alert('¡Reporte enviado con éxito!');
+        // Opcional: Limpia los campos del formulario después de enviar
+        this.reset();
+    });
+</script>
+
+    </main>
+    <footer>
+        © 2024 Serliv. Todos los derechos reservados.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
